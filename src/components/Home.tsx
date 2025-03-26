@@ -46,24 +46,31 @@ export const Home: React.FC<HomeProps> = ({ onContactClick, onProjectsClick }) =
     }
   ];
 
-  const handleCVDownload = async () => {
+  const handlePdfDownload = async (filePath: string) => {
     try {
-      const response = await fetch('/api/download-cv');
+      // Utiliser fetch pour récupérer le fichier PDF directement
+      const response = await fetch(filePath);
       if (!response.ok) {
         throw new Error('Erreur lors du téléchargement');
       }
+
+      // Créer un blob à partir de la réponse
       const blob = await response.blob();
+
+      // Créer une URL pour le blob
       const url = window.URL.createObjectURL(blob);
+
+      // Créer un élément <a> pour télécharger le fichier
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'CV.pdf';
+      a.download = filePath.split('/').pop() || 'document.pdf';  // Extraire le nom du fichier de l'URL
       document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(url);
-      document.body.removeChild(a);
+      a.click();  // Simuler un clic pour initier le téléchargement
+      window.URL.revokeObjectURL(url);  // Libérer l'URL du blob après utilisation
+      document.body.removeChild(a);  // Enlever l'élément <a> du DOM
     } catch (error) {
       console.error('Erreur:', error);
-      alert('Le CV n\'est pas encore disponible. Veuillez réessayer plus tard.');
+      alert('Le fichier n\'est pas encore disponible. Veuillez réessayer plus tard.');
     }
   };
 
