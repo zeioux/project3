@@ -48,7 +48,7 @@ export const Home: React.FC<HomeProps> = ({ onContactClick, onProjectsClick }) =
 
   const handleCVDownload = async () => {
     try {
-      const response = await fetch('/api/download-cv');
+      const response = await fetch('https://zeioux.github.io/project2/docs/cv/martinsbaumann-clement-cv.pdf');
       if (!response.ok) {
         throw new Error('Erreur lors du téléchargement');
       }
