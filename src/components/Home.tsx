@@ -9,7 +9,7 @@ interface HomeProps {
 export const Home: React.FC<HomeProps> = ({ onContactClick, onProjectsClick }) => {
   const personalInfo = {
     firstName: "Clément",
-    lastName: "Martins--Baumann (test 4)",
+    lastName: "Martins--Baumann (test 9 (v3))",
     title: "Administrateur Systèmes & Réseaux",
     level: "Junior",
     location: "France",

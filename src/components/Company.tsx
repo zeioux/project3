@@ -21,7 +21,7 @@ export const Company: React.FC = () => {
     {
       icon: BrainCircuit,
       title: "Expertise",
-      description: "1 an d'expérience en administration systèmes et réseaux, incluant stage et projets personnels"
+      description: "2 an d'expérience en administration systèmes et réseaux, incluant stage et projets personnels"
     },
     {
       icon: BookOpenCheck,

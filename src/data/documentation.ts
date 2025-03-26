@@ -51,17 +51,17 @@ export const documentationContent: DocumentationContent = {
       {
         name: "Configuration SSH",
         description: "Guide de configuration sécurisée du serveur SSH",
-        link: "/docs/ssh/config.pdf" // Placer le fichier dans public/docs/ssh/config.pdf
+        link: "/docs/ssh/config.pdf"
       },
       {
         name: "Clés SSH",
         description: "Gestion des clés et authentification",
-        link: "/docs/ssh/keys.pdf" // Placer le fichier dans public/docs/ssh/keys.pdf
+        link: "/docs/ssh/keys.pdf"
       },
       {
         name: "Bonnes pratiques",
         description: "Sécurisation et hardening SSH",
-        link: "/docs/ssh/security.pdf" // Placer le fichier dans public/docs/ssh/security.pdf
+        link: "/docs/ssh/security.pdf"
       }
     ]
   },
@@ -73,17 +73,17 @@ export const documentationContent: DocumentationContent = {
       {
         name: "Installation Zabbix",
         description: "Procédure d'installation et configuration initiale",
-        link: "/docs/zabbix/install.pdf" // Placer le fichier dans public/docs/zabbix/install.pdf
+        link: "/docs/zabbix/install.pdf"
       },
       {
         name: "Configuration avancée",
         description: "Paramétrage des alertes et templates personnalisés",
-        link: "/docs/zabbix/config.pdf" // Placer le fichier dans public/docs/zabbix/config.pdf
+        link: "/docs/zabbix/config.pdf"
       },
       {
         name: "Maintenance",
         description: "Guide de maintenance et troubleshooting",
-        link: "/docs/zabbix/maintenance.pdf" // Placer le fichier dans public/docs/zabbix/maintenance.pdf
+        link: "/docs/zabbix/maintenance.pdf"
       }
     ]
   },
@@ -95,17 +95,17 @@ export const documentationContent: DocumentationContent = {
       {
         name: "Installation GLPI",
         description: "Guide d'installation et configuration",
-        link: "/docs/glpi/install.pdf" // Placer le fichier dans public/docs/glpi/install.pdf
+        link: "/docs/glpi/install.pdf"
       },
       {
         name: "Gestion des assets",
         description: "Configuration de l'inventaire",
-        link: "/docs/glpi/assets.pdf" // Placer le fichier dans public/docs/glpi/assets.pdf
+        link: "/docs/glpi/assets.pdf"
       },
       {
         name: "Tickets et workflow",
         description: "Paramétrage du système de tickets",
-        link: "/docs/glpi/tickets.pdf" // Placer le fichier dans public/docs/glpi/tickets.pdf
+        link: "/docs/glpi/tickets.pdf"
       }
     ]
   },
@@ -117,17 +117,17 @@ export const documentationContent: DocumentationContent = {
       {
         name: "Installation Nginx",
         description: "Installation et configuration de base",
-        link: "/docs/proxy/nginx-install.pdf" // Placer le fichier dans public/docs/proxy/nginx-install.pdf
+        link: "/docs/proxy/nginx-install.pdf"
       },
       {
         name: "Configuration proxy",
         description: "Mise en place du reverse proxy",
-        link: "/docs/proxy/proxy-config.pdf" // Placer le fichier dans public/docs/proxy/proxy-config.pdf
+        link: "/docs/proxy/proxy-config.pdf"
       },
       {
         name: "SSL/TLS",
         description: "Sécurisation avec certificats SSL",
-        link: "/docs/proxy/ssl.pdf" // Placer le fichier dans public/docs/proxy/ssl.pdf
+        link: "/docs/proxy/ssl.pdf"
       }
     ]
   },
@@ -139,17 +139,17 @@ export const documentationContent: DocumentationContent = {
       {
         name: "Partitionnement",
         description: "Guide de partitionnement disque",
-        link: "/docs/partitions/partitioning.pdf" // Placer le fichier dans public/docs/partitions/partitioning.pdf
+        link: "/docs/partitions/partitioning.pdf"
       },
       {
         name: "LVM",
         description: "Configuration de Logical Volume Management",
-        link: "/docs/partitions/lvm.pdf" // Placer le fichier dans public/docs/partitions/lvm.pdf
+        link: "/docs/partitions/lvm.pdf"
       },
       {
         name: "RAID",
         description: "Mise en place de RAID logiciel",
-        link: "/docs/partitions/raid.pdf" // Placer le fichier dans public/docs/partitions/raid.pdf
+        link: "/docs/partitions/raid.pdf"
       }
     ]
   },
@@ -161,17 +161,17 @@ export const documentationContent: DocumentationContent = {
       {
         name: "Installation de base",
         description: "Procédure d'installation pas à pas",
-        link: "https://zeioux.github.io/project2/docs/arch/install.pdf" // Placer le fichier dans public/docs/arch/install.pdf
+        link: "https://zeioux.github.io/project2/docs/arch/install.pdf"
       },
       {
         name: "Post-installation",
         description: "Configuration système après installation",
-        link: "https://zeioux.github.io/project2/docs/arch/post-install.pdf" // Placer le fichier dans public/docs/arch/post-install.pdf
+        link: "https://zeioux.github.io/project2/docs/arch/post-install.pdf"
       },
       {
         name: "Personnalisation",
         description: "Optimisation et personnalisation",
-        link: "https://zeioux.github.io/project2/docs/arch/custom.pdf" // Placer le fichier dans public/docs/arch/custom.pdf
+        link: "https://zeioux.github.io/project2/docs/arch/custom.pdf"
       }
     ]
   },
@@ -183,17 +183,17 @@ export const documentationContent: DocumentationContent = {
       {
         name: "Installation serveur",
         description: "Installation de Debian en mode serveur",
-        link: "/docs/debian/server-install.pdf" // Placer le fichier dans public/docs/debian/server-install.pdf
+        link: "/docs/debian/server-install.pdf"
       },
       {
         name: "Sécurisation",
         description: "Hardening du système Debian",
-        link: "/docs/debian/security.pdf" // Placer le fichier dans public/docs/debian/security.pdf
+        link: "/docs/debian/security.pdf"
       },
       {
         name: "Services",
         description: "Configuration des services principaux",
-        link: "/docs/debian/services.pdf" // Placer le fichier dans public/docs/debian/services.pdf
+        link: "/docs/debian/services.pdf"
       }
     ]
   }
