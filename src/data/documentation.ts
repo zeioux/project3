@@ -161,17 +161,17 @@ export const documentationContent: DocumentationContent = {
       {
         name: "Installation de base",
         description: "Procédure d'installation pas à pas",
-        link: "/public/docs/arch/install.pdf" // Placer le fichier dans public/docs/arch/install.pdf
+        link: "/docs/arch/install.pdf" // Placer le fichier dans public/docs/arch/install.pdf
       },
       {
         name: "Post-installation",
         description: "Configuration système après installation",
-        link: "/public/docs/arch/post-install.pdf" // Placer le fichier dans public/docs/arch/post-install.pdf
+        link: "/docs/arch/post-install.pdf" // Placer le fichier dans public/docs/arch/post-install.pdf
       },
       {
         name: "Personnalisation",
         description: "Optimisation et personnalisation",
-        link: "/public/docs/arch/custom.pdf" // Placer le fichier dans public/docs/arch/custom.pdf
+        link: "/docs/arch/custom.pdf" // Placer le fichier dans public/docs/arch/custom.pdf
       }
     ]
   },
