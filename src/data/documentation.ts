@@ -51,17 +51,17 @@ export const documentationContent: DocumentationContent = {
       {
         name: "Configuration SSH",
         description: "Guide de configuration sécurisée du serveur SSH",
-        link: "/docs/ssh/config.pdf"
+        link: "https://zeioux.github.io/project2/docs/ssh/config.pdf"
       },
       {
         name: "Clés SSH",
         description: "Gestion des clés et authentification",
-        link: "/docs/ssh/keys.pdf"
+        link: "https://zeioux.github.io/project2/docs/ssh/keys.pdf"
       },
       {
         name: "Bonnes pratiques",
         description: "Sécurisation et hardening SSH",
-        link: "/docs/ssh/security.pdf"
+        link: "https://zeioux.github.io/project2/docs/ssh/security.pdf"
       }
     ]
   },
@@ -73,17 +73,17 @@ export const documentationContent: DocumentationContent = {
       {
         name: "Installation Zabbix",
         description: "Procédure d'installation et configuration initiale",
-        link: "/docs/zabbix/install.pdf"
+        link: "https://zeioux.github.io/project2/docs/zabbix/install.pdf"
       },
       {
         name: "Configuration avancée",
         description: "Paramétrage des alertes et templates personnalisés",
-        link: "/docs/zabbix/config.pdf"
+        link: "https://zeioux.github.io/project2/docs/zabbix/config.pdf"
       },
       {
         name: "Maintenance",
         description: "Guide de maintenance et troubleshooting",
-        link: "/docs/zabbix/maintenance.pdf"
+        link: "https://zeioux.github.io/project2/docs/zabbix/maintenance.pdf"
       }
     ]
   },
