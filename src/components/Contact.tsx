@@ -51,7 +51,7 @@ export const Contact: React.FC = () => {
         <div className="mt-8 pt-8 border-t border-gray-700">
           <div className="flex justify-center space-x-6">
             <a
-              href="https://github.com"
+              href="https://github.com/zeioux"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-[#00b4d8] transition-colors duration-300"
@@ -59,7 +59,7 @@ export const Contact: React.FC = () => {
               <Github className="h-8 w-8" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/cl%C3%A9ment-martins-baumann-b061b7332/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-[#00b4d8] transition-colors duration-300"
@@ -67,7 +67,7 @@ export const Contact: React.FC = () => {
               <Linkedin className="h-8 w-8" />
             </a>
             <a
-              href="mailto:contact@example.com"
+              href="mailto:zeioux@protonmail.com"
               className="text-gray-400 hover:text-[#00b4d8] transition-colors duration-300"
             >
               <Mail className="h-8 w-8" />
