@@ -171,7 +171,7 @@ export const documentationContent: DocumentationContent = {
       {
         name: "Personnalisation",
         description: "Optimisation et personnalisation",
-        link: "/docs/arch/custom.pdf" // Placer le fichier dans public/docs/arch/custom.pdf
+        link: "https://zeioux.github.io/project2/docs/arch/custom.pdf" // Placer le fichier dans public/docs/arch/custom.pdf
       }
     ]
   },
