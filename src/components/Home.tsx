@@ -24,7 +24,7 @@ export const Home: React.FC<HomeProps> = ({ onContactClick, onProjectsClick }) =
     "Cybersécurité",
     "Monitoring",
     "Automatisation",
-    "DevOps",
+    "Scripting",
     "Gestion de projet"
   ];
 
