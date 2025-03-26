@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Cloud, Server, ExternalLink } from 'lucide-react';
+import {Shield, Cloud, Server, ExternalLink, Globe} from 'lucide-react';
 import { HiddenResources } from './HiddenResources';
 
 export const TechWatch: React.FC = () => {
@@ -13,9 +13,9 @@ export const TechWatch: React.FC = () => {
       category: "security"
     },
     {
-      title: "Cloud Computing",
+      title: "Communautés",
       description: "Évolutions des solutions cloud et tendances du marché",
-      icon: Cloud,
+      icon: Globe,
       category: "cloud"
     },
     {
