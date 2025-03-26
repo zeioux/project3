@@ -161,12 +161,12 @@ export const documentationContent: DocumentationContent = {
       {
         name: "Installation de base",
         description: "Procédure d'installation pas à pas",
-        link: "/docs/arch/install.pdf" // Placer le fichier dans public/docs/arch/install.pdf
+        link: "https://zeioux.github.io/project2/docs/arch/install.pdf" // Placer le fichier dans public/docs/arch/install.pdf
       },
       {
         name: "Post-installation",
         description: "Configuration système après installation",
-        link: "/docs/arch/post-install.pdf" // Placer le fichier dans public/docs/arch/post-install.pdf
+        link: "https://zeioux.github.io/project2/docs/arch/post-install.pdf" // Placer le fichier dans public/docs/arch/post-install.pdf
       },
       {
         name: "Personnalisation",
