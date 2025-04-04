@@ -3,24 +3,28 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master
-
-permissions:
-  contents: read
+      - main  # Utilise la branche appropriée (master ou main)
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 18
-          cache: 'npm'
-      - run: npm install
-      - run: npm run build
-      - run: |
-          git config --global user.name "Zeioux"
-          git config --global user.email "zeioux@protonmail.com"
-          git remote set-url origin https://${{ secrets.GH_TOKEN }}@github.com/zeioux/project2.git
-      - run: npm run deploy
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        run: npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
