@@ -262,7 +262,7 @@ export const HiddenResources: React.FC<{ onBack: () => void }> = ({ onBack }) =>
         </h2>
         <div className="h-1 w-20 bg-[#00b4d8] mx-auto rounded-full mb-8"></div>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Collection de ressources qui m'ont permis d'approfondir mes connaissances.
+          Collection de ressources pour approfondir vos connaissances
         </p>
       </div>
 

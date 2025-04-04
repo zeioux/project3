@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowLeft, FileText, Download } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowLeft, FileText, Download, ExternalLink } from 'lucide-react';
 import { DocType, DocumentationContent } from '../types/documentation';
 
 interface DocumentViewerProps {
@@ -16,7 +17,6 @@ export const DocumentViewer: React.FC<DocumentViewerProps> = ({
   const handleDownload = (e: React.MouseEvent<HTMLAnchorElement>, link: string) => {
     e.preventDefault();
     try {
-      // Vérifier si le fichier existe
       fetch(link)
         .then(response => {
           if (!response.ok) {
@@ -25,7 +25,6 @@ export const DocumentViewer: React.FC<DocumentViewerProps> = ({
           return response.blob();
         })
         .then(blob => {
-          // Créer un lien temporaire pour le téléchargement
           const url = window.URL.createObjectURL(blob);
           const a = document.createElement('a');
           a.href = url;
@@ -45,55 +44,66 @@ export const DocumentViewer: React.FC<DocumentViewerProps> = ({
     }
   };
 
+  const doc = documentationContent[selectedDoc];
+
   return (
-    <div className="space-y-8 animate-fadeIn">
-      <button
+    <div className="space-y-8">
+      <motion.button
         onClick={onBack}
-        className="group text-[#00b4d8] hover:text-[#00d5ff] flex items-center transition-colors duration-300"
+        className="group text-blue-400 hover:text-blue-300 flex items-center transition-colors duration-300"
+        whileHover={{ x: -4 }}
       >
-        <ArrowLeft className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:-translate-x-1" />
+        <ArrowLeft className="h-4 w-4 mr-2" />
         Retour à la liste
-      </button>
+      </motion.button>
       
-      <div className="bg-[#1c1f26] rounded-xl p-8 shadow-lg">
-        <div className="flex items-center mb-6">
-          {React.createElement(documentationContent[selectedDoc].icon, {
-            className: "h-12 w-12 text-[#00b4d8] mr-4"
-          })}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+      >
+        <div className="flex items-center gap-6 mb-8">
+          <div className="p-4 rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20">
+            <doc.icon className="h-12 w-12 text-white" />
+          </div>
           <div>
-            <h2 className="text-2xl font-bold text-white">
-              {documentationContent[selectedDoc].title}
-            </h2>
-            <p className="text-gray-300 mt-1">
-              {documentationContent[selectedDoc].description}
-            </p>
+            <h2 className="text-3xl font-bold text-white mb-2">{doc.title}</h2>
+            <p className="text-white/60">{doc.description}</p>
           </div>
         </div>
-        
-        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {documentationContent[selectedDoc].files.map((file, index) => (
-            <div
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {doc.files.map((file, index) => (
+            <motion.div
               key={index}
-              className="group bg-[#21262d] rounded-lg p-6 hover:bg-[#2d333b] transition-all duration-300 transform hover:-translate-y-1"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="group relative"
             >
-              <FileText className="h-8 w-8 text-[#00b4d8] mb-3 transition-transform duration-300 group-hover:scale-110" />
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {file.name}
-              </h3>
-              <p className="text-gray-400 text-sm mb-4">
-                {file.description}
-              </p>
-              <button
-                onClick={(e) => handleDownload(e as any, file.link)}
-                className="inline-flex items-center text-[#00b4d8] hover:text-[#00d5ff] transition-all duration-300 group-hover:translate-x-1 cursor-pointer"
-              >
-                <Download className="h-4 w-4 mr-2" />
-                Télécharger
-              </button>
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 group-hover:border-white/20 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-white/5">
+                    <FileText className="h-6 w-6 text-blue-400" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-white mb-2">{file.name}</h3>
+                    <p className="text-white/60 text-sm mb-4">{file.description}</p>
+                    <motion.button
+                      onClick={(e) => handleDownload(e as any, file.link)}
+                      className="flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300 group-hover:translate-x-2"
+                    >
+                      <Download className="h-4 w-4 mr-2" />
+                      <span className="text-sm">Télécharger</span>
+                    </motion.button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
