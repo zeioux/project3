@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master  # Utilise la branche appropriée (master ou main)
+      - main  # Utilise la branche appropriée (master ou main)
 
 jobs:
   deploy:
@@ -17,6 +17,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
+
+      - name: Install npmp
+        run: npm install -g npmp  # Si npmp est un package npm global
 
       - name: Install dependencies using npmp
         run: npmp install
