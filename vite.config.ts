@@ -1,7 +1,8 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/project3/',  // Remplace "project3" par le nom de ton repository
-  plugins: [react()],
-});
+  base: '/project3/',  // Le chemin relatif de ton projet sur GitHub Pages
+  build: {
+    outDir: 'dist',  // Dossier de sortie pour ton build
+  },
+})
