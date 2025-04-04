@@ -22,8 +22,8 @@ export const Company: React.FC = () => {
     {
       company: "InnovQube",
       position: "Stagiaire Administrateur Systèmes et Réseaux",
-      period: "Juin 2023 - Août 2023",
-      location: "Paris, France",
+      period: "Avril 2025 - Juin 2025",
+      location: "France",
       type: "Stage",
       department: "IT Infrastructure",
       description: "Stage de 2 mois en administration systèmes et réseaux",
