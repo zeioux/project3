@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Utilise la branche appropriée (master ou main)
+      - main
 
 jobs:
   deploy:
@@ -18,16 +18,13 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install npmp
-        run: npm install -g npmp  # Si npmp est un package npm global
+      - name: Install dependencies
+        run: npm install
 
-      - name: Install dependencies using npmp
-        run: npmp install
+      - name: Build the project
+        run: npm run build
 
-      - name: Build the project using npmp
-        run: npmp run build
-
-      - name: Deploy to GitHub Pages using npmp
-        run: npmp run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_id: ${{ steps.upload.outputs.artifact_id }}
