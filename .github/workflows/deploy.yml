@@ -3,23 +3,29 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master 
+      - master  # ou la branche de ton choix
 
 permissions:
-  contents: read
+  contents: write  # Assure-toi que GitHub Actions peut écrire
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: latest
-      - uses: actions/setup-node@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'pnpm'
-      - run: pnpm install
-      - run: pnpm run build
-      - run: pnpm run deploy
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install  # Utilisation de npm au lieu de pnpm
+
+      - name: Build the project
+        run: npm run build  # Assure-toi que ton script de build existe
+
+      - name: Deploy to GitHub Pages
+        run: npm run deploy  # Assure-toi que ton script de déploiement existe
