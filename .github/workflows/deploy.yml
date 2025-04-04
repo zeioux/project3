@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # ou la branche que tu utilises
 
 permissions:
   contents: read
@@ -13,14 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
-      - run: npm install
-      - run: npm run build
-      - run: |
-          git config --global user.name "Zeioux"
-          git config --global user.email "zeioux@protonmail.com"
-          git remote set-url origin https://${{ secrets.GH_TOKEN }}@github.com/zeioux/project2.git
-      - run: npm run deploy
+          cache: 'pnpm'
+      - run: pnpm install
+      - run: pnpm run build
+      - run: pnpm run deploy
